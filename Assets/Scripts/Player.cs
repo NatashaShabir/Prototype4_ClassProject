@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public new Camera camera;
+    public new Camera camera; //a reference to the camera of the player to track where the raycast should start
 
     public bool canInteract;
 
     void Update()
     {
         //detects if what the player is looking at can be interacted with
+        //needed for the UIManager to change crosshair
         //interactable objects will have the Interactable tag
         RaycastHit hit;
         if (Physics.Raycast(camera.transform.position, camera.transform.TransformDirection(Vector3.forward), out hit, 1.5f))
@@ -41,6 +42,7 @@ public class Player : MonoBehaviour
 
     void InteractClick(GameObject obj)
     {
+        //if object clicked on is a light switch
         if (obj.GetComponent<LightSwitch>())
         {
             obj.GetComponent<LightSwitch>().Clicked();

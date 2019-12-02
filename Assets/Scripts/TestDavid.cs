@@ -19,14 +19,7 @@ public class TestDavid : MonoBehaviour
     {
         if (Input.GetKeyDown("e"))
         {
-            if (light.GetComponent<LightSwitch>().isOn)
-            {
-                light.GetComponent<LightSwitch>().Off();
-            }
-            else
-            {
-                light.GetComponent<LightSwitch>().On();
-            }
+            player.transform.rotation = Quaternion.identity;
         }
     }
 }
