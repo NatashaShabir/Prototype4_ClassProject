@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/KarlTest1.unity
+    guid: 7aa2b3f01bd526c45911b63aeee32469
+  - enabled: 1
+    path: Assets/Scenes/KarlTest2.unity
+    guid: 55f17f86f8f097d43bcb2e81637f85f2
   m_configObjects: {}
