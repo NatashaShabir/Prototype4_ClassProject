@@ -20,10 +20,13 @@ public class TheatreColourSelections : MonoBehaviour
     public GameObject boxColour2;
     public GameObject boxColour3;
 
+    void Awake()
+    {
+        SetColours();
+    }
 
     void Start()
     {
-        SetColours();
     }
 
     // Update is called once per frame
