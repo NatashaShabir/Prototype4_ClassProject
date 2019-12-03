@@ -12,9 +12,15 @@ public class FallBox : MonoBehaviour
     {
         if (other.GetComponent<Player>())
         {
-            other.transform.position = destination.position;
+            if (destination != null)
+            {
+                other.transform.position = destination.position;
+            }
+        }
 
-            //other.transform.SetPositionAndRotation(destination.position, destination.rotation);
+        if (other.GetComponent<Platform>() && other.GetComponent<Platform>().canRespawn)
+        {
+            other.GetComponent<Platform>().Spawn();
         }
     }
 }
