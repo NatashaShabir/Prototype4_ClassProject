@@ -1404,7 +1404,7 @@ GameObject:
   - component: {fileID: 588157810}
   - component: {fileID: 588157809}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Cube 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3735,13 +3735,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab699e6fa0836864b8a5218b93906442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toreOurColours:
+  OurColoursChoices:
   - {fileID: 2100000, guid: ac6b23b3713d21248943d669a84c3f35, type: 2}
   - {fileID: 2100000, guid: 5314d7b0dcdb3664ebb8af1b040a216b, type: 2}
   - {fileID: 2100000, guid: 510367f7428a64a489bab09e6737c908, type: 2}
   boxsToChangeColour: []
   CurrentDrawColours: []
   firstColourChoice: {fileID: 0}
+  secondColourChoice: {fileID: 0}
+  thirdColourChoice: {fileID: 0}
+  boxColour1: {fileID: 1633891987}
+  boxColour2: {fileID: 2035452607}
+  boxColour3: {fileID: 588157807}
 --- !u!1 &1657479263
 GameObject:
   m_ObjectHideFlags: 0

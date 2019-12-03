@@ -16,6 +16,10 @@ public class TheatreColourSelections : MonoBehaviour
     public Material secondColourChoice;
     public Material thirdColourChoice;
 
+    public GameObject boxColour1;
+    public GameObject boxColour2;
+    public GameObject boxColour3;
+
 
     void Start()
     {
@@ -43,6 +47,9 @@ public class TheatreColourSelections : MonoBehaviour
         thirdColourChoice = OurColoursChoices[y];
         OurColoursChoices.Remove(thirdColourChoice);
 
+        boxColour1.GetComponent<Renderer>().material = firstColourChoice;
+        boxColour2.GetComponent<Renderer>().material = secondColourChoice;
+        boxColour3.GetComponent<Renderer>().material = thirdColourChoice;
     }
     
 
