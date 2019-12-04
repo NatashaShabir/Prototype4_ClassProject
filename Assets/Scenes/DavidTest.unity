@@ -502,7 +502,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9903168ee7b8ace4c9ee3b8c46c2221b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallObject: {fileID: 0}
 --- !u!95 &233050218
 Animator:
   serializedVersion: 3
@@ -513,7 +512,7 @@ Animator:
   m_GameObject: {fileID: 233050216}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d4992216c8f4b1347ad3a4488d351b48, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -7025,7 +7024,7 @@ MonoBehaviour:
   cube: {fileID: 1869263966}
   player: {fileID: 2004645522}
   light: {fileID: 836967209}
-  wall: {fileID: 1120767181}
+  wall: {fileID: 233050216}
 --- !u!4 &2021395847
 Transform:
   m_ObjectHideFlags: 0
