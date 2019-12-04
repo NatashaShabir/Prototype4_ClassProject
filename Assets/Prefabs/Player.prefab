@@ -18,7 +18,7 @@ GameObject:
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &400000
 Transform:
@@ -181,11 +181,11 @@ GameObject:
   - component: {fileID: 11400004}
   - component: {fileID: 2004958663936582222}
   m_Layer: 0
-  m_Name: RigidBodyFPSController
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &400002
 Transform:
@@ -246,9 +246,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 2000000}
   movementSettings:
-    ForwardSpeed: 12
-    BackwardSpeed: 8
-    StrafeSpeed: 10
+    ForwardSpeed: 8
+    BackwardSpeed: 6
+    StrafeSpeed: 8
     RunMultiplier: 1.5
     RunKey: 304
     JumpForce: 60
