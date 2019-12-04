@@ -134,10 +134,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_Jump = true;
             }
+
+            CharacterUpdate();
         }
 
 
-        private void FixedUpdate()
+        private void CharacterUpdate()
         {
             GroundCheck();
             Vector2 input = GetInput();
@@ -164,7 +166,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 if (m_Jump)
                 {
-                    m_RigidBody.drag = 0f;
+                    m_RigidBody.drag = 0.1f;
                     m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
                     m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
                     m_Jumping = true;
