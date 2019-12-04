@@ -8,6 +8,14 @@ public class TestDavid : MonoBehaviour
     public GameObject player;
     public new GameObject light;
 
+    public delegate void TheatreWalls();
+    public static TheatreWalls Shrink;
+    public static TheatreWalls Grow;
+    public static TheatreWalls Pause;
+
+
+    public GameObject wall;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +27,17 @@ public class TestDavid : MonoBehaviour
     {
         if (Input.GetKeyDown("e"))
         {
-            player.transform.rotation = Quaternion.identity;
+            Shrink();
+        }
+
+        if (Input.GetKeyDown("r"))
+        {
+            Grow();
+        }
+
+        if (Input.GetKeyDown("t"))
+        {
+            Pause();
         }
     }
 }

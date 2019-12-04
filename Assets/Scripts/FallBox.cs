@@ -6,7 +6,7 @@ using UnityEngine;
 //once triggered it should port the player to the attached transform
 public class FallBox : MonoBehaviour
 {
-    public Transform destination;
+    public Transform destination; //every object this script is attached to should have a transform manually attached to it
 
     private void OnTriggerEnter(Collider other)
     {
