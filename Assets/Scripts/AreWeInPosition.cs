@@ -16,6 +16,8 @@ public class AreWeInPosition : MonoBehaviour
     Material secondColour;
     Material thirdColour;
 
+    public bool rightColourChosen;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,10 +63,12 @@ public class AreWeInPosition : MonoBehaviour
         if (x.name + " (Instance)" == whatLightAreWeUnder.GetComponent<Renderer>().material.name)
         {
             Debug.Log("What A Great Pose. Clap,Clap,Clap,Clap,Clap,Clap!!");
+            rightColourChosen = true;
         }
         else
         {
             Debug.Log("Boooo!!! Your Standing In the WRONG Place!!!");
+            rightColourChosen = false;
         }
 
         Debug.Log(whatLightAreWeUnder.GetComponent<Renderer>().material.name + "" +
