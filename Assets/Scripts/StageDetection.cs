@@ -59,7 +59,7 @@ public class StageDetection : MonoBehaviour
                     }
                 }
 
-                if (countdown <= timeToMove)
+                if (countdown <= timeToMove )
                 {
                     counter.gameObject.SetActive(true);
                     PressE.gameObject.SetActive(false);

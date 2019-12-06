@@ -19,6 +19,9 @@ public class AreWeInPosition : MonoBehaviour
     public bool wePosed = false;
     public bool rightColourChosen = false;
 
+    //Target stage bariers
+    public GameObject bariers;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -87,7 +90,10 @@ public class AreWeInPosition : MonoBehaviour
         if (col.gameObject.tag == "Interactable")
         {
             whatLightAreWeUnder = col.gameObject;
-
+        }
+        else if (col.gameObject.tag == "BarierToStage")
+        {
+            bariers.SetActive(true);
         }
     }
 
