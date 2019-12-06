@@ -14,7 +14,6 @@ public class Diary : MonoBehaviour
     public delegate void DiaryFinish();
     public static DiaryFinish finish;
 
-    public GameObject door;
     bool clicked;
 
     void Start()

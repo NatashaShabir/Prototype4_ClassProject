@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &2329270482175520843
 RectTransform:
@@ -90,11 +90,11 @@ GameObject:
   - component: {fileID: 2329270483758387133}
   - component: {fileID: 2329270483758387132}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: FadeCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &2329270483758387121
 RectTransform:
@@ -188,12 +188,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f043efe86c88842ad9039a16123885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeSpeed: 1
+  fadeSpeed: 50
   shouldWeFade: 1
   fadeToBlack: 0
   startBlack: 1
   switchSceneAtEndOfFade: 0
   SceneToSwapTo: 
+  resetScene: 0
 --- !u!225 &2329270483758387132
 CanvasGroup:
   m_ObjectHideFlags: 0

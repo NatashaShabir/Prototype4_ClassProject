@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Bedroom 1.unity
     guid: 2ecc1ee2ccd16ff4a85e3cc0ded11ba1
   - enabled: 1
-    path: Assets/Scenes/Island NEW.unity
-    guid: 3288fecb35bfb5f48a774831d8dc597f
+    path: Assets/Scenes/Island Updated.unity
+    guid: d096f0c84ea1c7045a3ae1734dba3b9f
   - enabled: 1
     path: Assets/Scenes/Bedroom 2.unity
     guid: d9ae68ce12ec7984da496af18c5e664c

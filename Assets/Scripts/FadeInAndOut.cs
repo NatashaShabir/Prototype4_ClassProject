@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class FadeInAndOut : MonoBehaviour
 {
     //speed to fade in
-    public float fadeSpeed = 1f;
+    public float fadeSpeed = 1;
     //what is our current fade
     float currentFade = 0f;
     //when do we fade
@@ -66,20 +66,28 @@ public class FadeInAndOut : MonoBehaviour
 
     void FadeClear()
     {
-        if(currentFade != 100)
+        if (currentFade < 100)
         {
-            currentFade += fadeSpeed;
+            currentFade += fadeSpeed * Time.deltaTime;
             this.GetComponent<CanvasGroup>().alpha = (100 - currentFade) / 100;
+        }
+        else
+        {
+            currentFade = 100; //clamps it at 100
         }
         
     }
 
     void FadeBlack()
     {
-        if (currentFade != 0)
+        if (currentFade > 0)
         {
-            currentFade -= fadeSpeed;
+            currentFade -= fadeSpeed * Time.deltaTime;
             this.GetComponent<CanvasGroup>().alpha = (100 - currentFade) / 100;
+        }
+        else
+        {
+            currentFade = 0;
         }
     }
 
@@ -88,7 +96,7 @@ public class FadeInAndOut : MonoBehaviour
     {
         if (switchSceneAtEndOfFade == true)
         {
-            if (currentFade == 100 && fadeToBlack == false || currentFade == 0 && fadeToBlack == true)
+            if (currentFade >= 100 && fadeToBlack == false || currentFade <= 0 && fadeToBlack == true)
             {
                 if (SceneManager.GetActiveScene().buildIndex + 1 != SceneManager.sceneCountInBuildSettings)
                 {

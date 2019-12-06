@@ -80,7 +80,7 @@ public class Platform : MonoBehaviour
         {
             timer -= Time.deltaTime;
 
-            if (timer <= 0)
+            if (timer <= 0 && gameObject.GetComponent<Rigidbody>() == null)
             {
                 gameObject.AddComponent<Rigidbody>();
             }

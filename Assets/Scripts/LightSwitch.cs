@@ -4,23 +4,18 @@ using UnityEngine;
 
 public class LightSwitch : MonoBehaviour
 {
-    public GameObject lightObject; //the light object that the switch will turn on/off
-    public GameObject spotlight; //the light source of the light object
+    public GameObject lightBulb; //the light object that the switch will turn on/off
+    public GameObject lightSource; //the light source of the light object
     public Material lit; //material of the light object
     public Material unlit;
 
     public bool isOn;
 
+    Animator animator;
+
     void Start()
     {
-        if (isOn)
-        {
-            On();
-        }
-        else
-        {
-            Off();
-        }
+        animator = GetComponentInParent<Animator>();
     }
 
     void Update()
@@ -28,30 +23,39 @@ public class LightSwitch : MonoBehaviour
         
     }
 
-    public void On()
+    /*public void On()
     {
-        lightObject.GetComponent<Renderer>().material = lit;
-        spotlight.SetActive(true);
+        lightBulb.GetComponent<Renderer>().material = lit;
+        lightSource.SetActive(true);
         isOn = true;
     }
 
     public void Off()
     {
-        lightObject.GetComponent<Renderer>().material = unlit;
-        spotlight.SetActive(false);
+        lightBulb.GetComponent<Renderer>().material = unlit;
+        lightSource.SetActive(false);
         isOn = false;
-    }
+    }*/
 
     //if clicked on
     public void Clicked()
     {
-        if (isOn)
+        if (!isOn)
         {
-            Off();
+            Switch();
         }
-        else
-        {
-            On();
-        }
+    }
+    void Switch()
+    {
+        isOn = true;
+        animator.SetBool("switched", true);
+        StartCoroutine(LightOn());
+    }
+
+    IEnumerator LightOn()
+    {
+        yield return new WaitForSeconds(1);
+        lightSource.SetActive(true);
+        //lightBulb.GetComponent<Renderer>().material = lit;
     }
 }

@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     void SceneStart(Scene scene, LoadSceneMode mode)
     {
-        //ANALYTICS
+        //ANALYTICS UNCOMMENT WHEN NEEDED
         /*if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             Levels(true, false, false, false);
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
 
     public void EndScene()
     {
-        //ANALYTICS
+        //ANALYTICS UNCOMMENT WHEN NEEDED
         /*if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             Levels(true, true, false, false);

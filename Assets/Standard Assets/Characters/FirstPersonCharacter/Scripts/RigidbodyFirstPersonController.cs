@@ -135,11 +135,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_Jump = true;
             }
 
-            CharacterUpdate();
+            //CharacterUpdate();
         }
 
 
-        private void CharacterUpdate()
+        private void FixedUpdate()
         {
             GroundCheck();
             Vector2 input = GetInput();
