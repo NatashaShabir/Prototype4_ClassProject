@@ -211,6 +211,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9045837910409527009, guid: d80cb4cebb084714d90b76416a0c48d6,
+        type: 3}
+      propertyPath: m_Name
+      value: Crank (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 9200282184967021448, guid: d80cb4cebb084714d90b76416a0c48d6,
         type: 3}
       propertyPath: lightObject
@@ -221,11 +226,6 @@ PrefabInstance:
       propertyPath: spotlight
       value: 
       objectReference: {fileID: 1251090381}
-    - target: {fileID: 9045837910409527009, guid: d80cb4cebb084714d90b76416a0c48d6,
-        type: 3}
-      propertyPath: m_Name
-      value: Crank (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 5463460634004704498, guid: d80cb4cebb084714d90b76416a0c48d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3063,6 +3063,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9045837910409527009, guid: d80cb4cebb084714d90b76416a0c48d6,
+        type: 3}
+      propertyPath: m_Name
+      value: Crank (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 9200282184967021448, guid: d80cb4cebb084714d90b76416a0c48d6,
         type: 3}
       propertyPath: lightObject
@@ -3073,11 +3078,6 @@ PrefabInstance:
       propertyPath: spotlight
       value: 
       objectReference: {fileID: 2011561538}
-    - target: {fileID: 9045837910409527009, guid: d80cb4cebb084714d90b76416a0c48d6,
-        type: 3}
-      propertyPath: m_Name
-      value: Crank (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 5463460634004704498, guid: d80cb4cebb084714d90b76416a0c48d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3339,6 +3339,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9045837910409527009, guid: d80cb4cebb084714d90b76416a0c48d6,
+        type: 3}
+      propertyPath: m_Name
+      value: Crank (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 9200282184967021448, guid: d80cb4cebb084714d90b76416a0c48d6,
         type: 3}
       propertyPath: lightObject
@@ -3349,11 +3354,6 @@ PrefabInstance:
       propertyPath: spotlight
       value: 
       objectReference: {fileID: 656599685}
-    - target: {fileID: 9045837910409527009, guid: d80cb4cebb084714d90b76416a0c48d6,
-        type: 3}
-      propertyPath: m_Name
-      value: Crank (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 5463460634004704498, guid: d80cb4cebb084714d90b76416a0c48d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3675,6 +3675,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9045837910409527009, guid: d80cb4cebb084714d90b76416a0c48d6,
+        type: 3}
+      propertyPath: m_Name
+      value: Crank (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 9200282184967021448, guid: d80cb4cebb084714d90b76416a0c48d6,
         type: 3}
       propertyPath: lightObject
@@ -3685,11 +3690,6 @@ PrefabInstance:
       propertyPath: spotlight
       value: 
       objectReference: {fileID: 642215834}
-    - target: {fileID: 9045837910409527009, guid: d80cb4cebb084714d90b76416a0c48d6,
-        type: 3}
-      propertyPath: m_Name
-      value: Crank (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 5463460634004704498, guid: d80cb4cebb084714d90b76416a0c48d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3844,6 +3844,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1542700281 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: ba3de8b0a0564494a94d0d749a0a908c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2013930696}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1542700283
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542700281}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 30f99d182e0073c47b053d36762ac2a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1547201974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3851,6 +3876,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9045837910409527009, guid: d80cb4cebb084714d90b76416a0c48d6,
+        type: 3}
+      propertyPath: m_Name
+      value: Crank (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 9200282184967021448, guid: d80cb4cebb084714d90b76416a0c48d6,
         type: 3}
       propertyPath: lightObject
@@ -3861,11 +3891,6 @@ PrefabInstance:
       propertyPath: spotlight
       value: 
       objectReference: {fileID: 1623709083}
-    - target: {fileID: 9045837910409527009, guid: d80cb4cebb084714d90b76416a0c48d6,
-        type: 3}
-      propertyPath: m_Name
-      value: Crank (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 5463460634004704498, guid: d80cb4cebb084714d90b76416a0c48d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5236,6 +5261,10 @@ PrefabInstance:
       propertyPath: canInteract
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: ba3de8b0a0564494a94d0d749a0a908c, type: 3}
+      propertyPath: mouseLook.clampVerticalRotation
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba3de8b0a0564494a94d0d749a0a908c, type: 3}
 --- !u!1001 &2078558667
@@ -5613,6 +5642,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9045837910409527009, guid: d80cb4cebb084714d90b76416a0c48d6,
+        type: 3}
+      propertyPath: m_Name
+      value: Crank
+      objectReference: {fileID: 0}
     - target: {fileID: 9200282184967021448, guid: d80cb4cebb084714d90b76416a0c48d6,
         type: 3}
       propertyPath: lightObject
@@ -5638,11 +5672,6 @@ PrefabInstance:
       propertyPath: unlit
       value: 
       objectReference: {fileID: 2100000, guid: 9b28801e857e1064298e4b3caa649352, type: 2}
-    - target: {fileID: 9045837910409527009, guid: d80cb4cebb084714d90b76416a0c48d6,
-        type: 3}
-      propertyPath: m_Name
-      value: Crank
-      objectReference: {fileID: 0}
     - target: {fileID: 5463460634004704498, guid: d80cb4cebb084714d90b76416a0c48d6,
         type: 3}
       propertyPath: m_LocalPosition.x

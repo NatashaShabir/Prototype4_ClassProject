@@ -52,6 +52,8 @@ public class Platform : MonoBehaviour
             {
                 timer = timedLife;
                 isFalling = true;
+                //start shaking
+                Camera.main.GetComponent<Animator>().SetBool("IsShaking", true);
             }
             //else attaches the player to the platform so the player will move with the platform
             else
@@ -59,8 +61,6 @@ public class Platform : MonoBehaviour
                 other.transform.parent = transform;
             }
         }
-        
-        
     }
 
     private void OnTriggerExit(Collider other)
@@ -69,6 +69,8 @@ public class Platform : MonoBehaviour
         {
             other.transform.parent = null;
         }
+        //end shaking
+        Camera.main.GetComponent<Animator>().SetBool("IsShaking", false);
     }
 
     private void Update()

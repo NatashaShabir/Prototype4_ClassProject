@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
     }
 
     //Reset scene on
-    public void ResetScene()
+    public void ReloadScene()
     {
         if (fadeCanvas != null)
         {

@@ -124,6 +124,6 @@ public class AreWeInPosition : MonoBehaviour
     public void endSceneTrigger()
     {
         Debug.Log("End of scene!!");
-        GameManager.instance.ResetScene();             
+        GameManager.instance.ReloadScene();             
     }
 }
