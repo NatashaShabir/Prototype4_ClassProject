@@ -69,10 +69,6 @@ public class FadeInAndOut : MonoBehaviour
             currentFade += fadeSpeed;
             this.GetComponent<CanvasGroup>().alpha = (100 - currentFade) / 100;
         }
-         else
-        {
-            swapScene();
-        }
         
     }
 
@@ -92,7 +88,11 @@ public class FadeInAndOut : MonoBehaviour
         {
             if (currentFade == 100 && fadeToBlack == false || currentFade == 0 && fadeToBlack == true)
             {
-                SceneManager.LoadScene(SceneToSwapTo);
+                if (SceneManager.GetActiveScene().buildIndex + 1 != SceneManager.sceneCountInBuildSettings)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+                
             }
         }
     }

@@ -12,17 +12,17 @@ public class WallScript : MonoBehaviour
     }
     private void OnEnable()
     {
-        TestDavid.Shrink += Shrink;
+        /*TestDavid.Shrink += Shrink;
         TestDavid.Grow += Grow;
-        TestDavid.Pause += Pause;
+        TestDavid.Pause += Pause;*/
         
     }
 
     private void OnDisable()
     {
-        TestDavid.Shrink -= Shrink;
+        /*TestDavid.Shrink -= Shrink;
         TestDavid.Grow -= Grow;
-        TestDavid.Pause -= Pause;
+        TestDavid.Pause -= Pause;*/
     }
 
     void Shrink()

@@ -25,19 +25,9 @@ public class TestDavid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("e"))
+        if (Input.GetKeyDown("p"))
         {
-            Shrink();
-        }
-
-        if (Input.GetKeyDown("r"))
-        {
-            Grow();
-        }
-
-        if (Input.GetKeyDown("t"))
-        {
-            Pause();
+            GameManager.instance.EndScene();
         }
     }
 }

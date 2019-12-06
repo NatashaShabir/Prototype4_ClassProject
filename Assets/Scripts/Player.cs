@@ -42,10 +42,16 @@ public class Player : MonoBehaviour
 
     void InteractClick(GameObject obj)
     {
-        //if object clicked on is a light switch
+        //if object clicked on is a light switch then trigger the clicked function of the light switch script
         if (obj.GetComponent<LightSwitch>())
         {
             obj.GetComponent<LightSwitch>().Clicked();
         }
+
+        if (obj.GetComponent<Diary>())
+        {
+            obj.GetComponent<Diary>().Clicked();
+        }
+
     }
 }
