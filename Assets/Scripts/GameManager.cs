@@ -85,6 +85,20 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void ReloadScene()
+    {
+        if(fadeCanvas != null)
+        {
+            fadeCanvas.GetComponent<FadeInAndOut>().fadeToBlack = true;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+    }
+
     //Analytic stuff
     public void Levels(bool startLevel1, bool endLevel1, bool startLevel2, bool endLevel2)
     {
