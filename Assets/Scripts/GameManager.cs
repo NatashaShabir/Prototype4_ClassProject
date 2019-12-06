@@ -85,6 +85,22 @@ public class GameManager : MonoBehaviour
         
     }
 
+    //Reset scene on
+    public void ResetScene()
+    {
+        if (fadeCanvas != null)
+        {
+            fadeCanvas.GetComponent<FadeInAndOut>().fadeToBlack = true;
+            fadeCanvas.GetComponent<FadeInAndOut>().switchSceneAtEndOfFade = true;
+            fadeCanvas.GetComponent<FadeInAndOut>().resetScene = true;
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
+
     //Analytic stuff
     public void Levels(bool startLevel1, bool endLevel1, bool startLevel2, bool endLevel2)
     {

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
+
 
 public class AreWeInPosition : MonoBehaviour
 {
@@ -9,6 +11,10 @@ public class AreWeInPosition : MonoBehaviour
 
     //what is the curret
     int poseNumber = 0;
+
+    int successfulPoses = 0;
+
+    public PlayableDirector timelineManager;
 
     //where we are getting our colour choices from
     public GameObject colourSelector;
@@ -58,6 +64,10 @@ public class AreWeInPosition : MonoBehaviour
         {
             CheckPoseColour(thirdColour);
             poseNumber += 1;
+            if (successfulPoses == 3)
+            {
+                GameManager.instance.EndScene();
+            }
         }
 
 
@@ -70,12 +80,16 @@ public class AreWeInPosition : MonoBehaviour
         if (x.name + " (Instance)" == whatLightAreWeUnder.GetComponent<Renderer>().material.name)
         {
             Debug.Log("What A Great Pose. Clap,Clap,Clap,Clap,Clap,Clap!!");
+            successfulPoses += 1;
             rightColourChosen = true;
         }
         else
         {
             Debug.Log("Boooo!!! Your Standing In the WRONG Place!!!");
             rightColourChosen = false;
+            //play end scene animation
+            timelineManager.Play();
+            Camera.main.GetComponent<Animator>().SetBool("IsShaking", true);
         }
 
        // Debug.Log(whatLightAreWeUnder.GetComponent<Renderer>().material.name + "" + x.name);
@@ -104,5 +118,12 @@ public class AreWeInPosition : MonoBehaviour
         {
             whatLightAreWeUnder = null;
         }
+    }
+    
+    //reset scene on fail state.
+    public void endSceneTrigger()
+    {
+        Debug.Log("End of scene!!");
+        GameManager.instance.ResetScene();             
     }
 }

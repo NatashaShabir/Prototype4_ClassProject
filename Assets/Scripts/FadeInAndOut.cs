@@ -21,6 +21,8 @@ public class FadeInAndOut : MonoBehaviour
 
     public string SceneToSwapTo;
 
+    public bool resetScene = false;
+
 
     void Start()
     {
@@ -90,7 +92,16 @@ public class FadeInAndOut : MonoBehaviour
             {
                 if (SceneManager.GetActiveScene().buildIndex + 1 != SceneManager.sceneCountInBuildSettings)
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    if(resetScene == false)
+                    {
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                    }
+
+                    
                 }
                 
             }
