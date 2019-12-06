@@ -2626,8 +2626,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf70047595a46ff428af7c3a49c23a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdown: 0
-  countdownReset: 3
+  countdownReset: 7
+  timeToMove: 5
   counter: {fileID: 1748545279}
   PressE: {fileID: 848687074}
 --- !u!1001 &1040054386
@@ -2723,6 +2723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatLightAreWeUnder: {fileID: 0}
   colourSelector: {fileID: 1642855687}
+  wePosed: 0
   rightColourChosen: 0
 --- !u!1 &1113644048
 GameObject:

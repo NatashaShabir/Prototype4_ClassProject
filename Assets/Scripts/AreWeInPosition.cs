@@ -16,7 +16,8 @@ public class AreWeInPosition : MonoBehaviour
     Material secondColour;
     Material thirdColour;
 
-    public bool rightColourChosen;
+    public bool wePosed = false;
+    public bool rightColourChosen = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,15 +30,17 @@ public class AreWeInPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    if (Input.GetKeyDown(KeyCode.Return))
+         if (Input.GetKeyDown(KeyCode.E))
         {
             PoseForCamera();
+            wePosed = true;
         }
     }
 
     //trigger current selection
     void PoseForCamera()
     {
+
         if (poseNumber == 0)
         {
             CheckPoseColour(fistColour);
@@ -53,6 +56,7 @@ public class AreWeInPosition : MonoBehaviour
             CheckPoseColour(thirdColour);
             poseNumber += 1;
         }
+
 
         //Debug.Log(poseNumber);
 
@@ -71,8 +75,8 @@ public class AreWeInPosition : MonoBehaviour
             rightColourChosen = false;
         }
 
-        Debug.Log(whatLightAreWeUnder.GetComponent<Renderer>().material.name + "" +
-            x.name);
+       // Debug.Log(whatLightAreWeUnder.GetComponent<Renderer>().material.name + "" + x.name);
+
         
     }
 
