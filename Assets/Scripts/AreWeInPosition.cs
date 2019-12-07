@@ -89,7 +89,6 @@ public class AreWeInPosition : MonoBehaviour
             rightColourChosen = false;
             //play end scene animation
             timelineManager.Play();
-            Camera.main.GetComponent<Animator>().SetBool("IsShaking", true);
         }
 
        // Debug.Log(whatLightAreWeUnder.GetComponent<Renderer>().material.name + "" + x.name);

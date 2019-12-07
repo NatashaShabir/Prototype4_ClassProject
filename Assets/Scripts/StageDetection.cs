@@ -14,8 +14,6 @@ public class StageDetection : MonoBehaviour
     public float countdownReset = 5; //What to reset it to
     public float timeToMove = 3; //At what time do we switch from press e text to counter text
 
-    public int timesSucceeded = 0; //How many times did the player fail to get the correct colour
-
     //Bools to check whether we should start the timer and whether the player is actually on stage
     private bool startTimer = false;
     private bool onStage = false;
@@ -58,10 +56,6 @@ public class StageDetection : MonoBehaviour
     {
         if (onStage == true)
         {
-            if(timesSucceeded >= 3)
-            {
-                GameManager.instance.EndScene();
-            }
 
             if (startTimer == true)
             {
@@ -118,7 +112,6 @@ public class StageDetection : MonoBehaviour
                                 startTimer = true;
                                 playerPosCheck.wePosed = false;
                                 PressE.gameObject.SetActive(true);
-                                timesSucceeded++;
 
                             }
                             else if (playerPosCheck.rightColourChosen == false)

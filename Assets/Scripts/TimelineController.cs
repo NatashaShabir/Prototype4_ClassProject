@@ -20,8 +20,8 @@ public class TimelineController : MonoBehaviour
 
     public void Play()
     {
+        Camera.main.GetComponent<Animator>().SetBool("IsShaking", true);
         sceneDirector.Play();
-
     }
 
     public void Pause()
