@@ -9,6 +9,8 @@ public class LightSwitch : MonoBehaviour
     public Material lit; //material of the light object
     public Material unlit;
 
+    public GameObject ray;
+
     public bool isOn;
 
     Animator animator;
@@ -57,5 +59,10 @@ public class LightSwitch : MonoBehaviour
         yield return new WaitForSeconds(1);
         lightSource.SetActive(true);
         //lightBulb.GetComponent<Renderer>().material = lit;
+
+        if (ray!= null)
+        {
+            ray.SetActive(true);
+        }
     }
 }
