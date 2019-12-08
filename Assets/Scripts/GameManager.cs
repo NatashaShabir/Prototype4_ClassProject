@@ -40,37 +40,42 @@ public class GameManager : MonoBehaviour
 
     void SceneStart(Scene scene, LoadSceneMode mode)
     {
-        //ANALYTICS UNCOMMENT WHEN NEEDED
-        /*if (SceneManager.GetActiveScene().buildIndex == 2)
+        //ANALYTICS
+        if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             Levels(true, false, false, false);
         }
         else if (SceneManager.GetActiveScene().buildIndex == 4)
         {
             Levels(true, true, true, false);
-        }*/
+        }
 
-        //This is so that the canvas that controls fading in and out doesn't get created during the menu screen
+        //This is so that the canvas that controls fading in and out doesn't get created during the menu screen or the end scene
         //The fade canvas made it so that the menu buttons could not be interacted with
-        if (SceneManager.GetActiveScene().buildIndex != 0)
+        if (SceneManager.GetActiveScene().buildIndex != 0 && SceneManager.GetActiveScene().buildIndex != SceneManager.sceneCountInBuildSettings - 1)
         {
             //creates canvas whenever a scene starts which should automatically fade in from black
             fadeCanvas = Instantiate(fadeCanvasPrefab);
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCountInBuildSettings - 1)
+        {
+            StartCoroutine(EndGame());
         }
 
     }
 
     public void EndScene()
     {
-        //ANALYTICS UNCOMMENT WHEN NEEDED
-        /*if (SceneManager.GetActiveScene().buildIndex == 2)
+        //ANALYTICS
+        if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             Levels(true, true, false, false);
         }
         else if (SceneManager.GetActiveScene().buildIndex == 4)
         {
             Levels(true, true, true, true);
-        }*/
+        }
 
         //start fading mechanics when scene is ending
         if (fadeCanvas != null)
@@ -98,6 +103,13 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+    }
+
+    IEnumerator EndGame()
+    {
+        yield return new WaitForSeconds(3);
+        UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
     }
 
 
