@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OpenTextBox : MonoBehaviour
 {
     Animator textAnimation;
+    public Text textBox;
 
     // Start is called before the first frame update
     void Start()
@@ -34,5 +36,18 @@ public class OpenTextBox : MonoBehaviour
             textAnimation.SetBool("Open", true);
         }
 
+    }
+
+    //set text and open box
+    public void SetTextAndOpen(string x)
+    {
+        textAnimation.SetBool("Open", true);
+        textBox.text = x;
+    }
+
+    //close text
+    public void CloseTextBox()
+    {
+        textAnimation.SetBool("Open", false);
     }
 }

@@ -16,6 +16,9 @@ public class Diary : MonoBehaviour
 
     bool clicked;
 
+    public GameObject textBoxPannel;
+    public string dairyText;
+
     void Start()
     {
         mySource = GetComponent<AudioSource>();
@@ -27,6 +30,7 @@ public class Diary : MonoBehaviour
         if (diaryClip != null)
         {
             playDiary(mySource, diaryClip);
+            textBoxPannel.GetComponent<OpenTextBox>().SetTextAndOpen(dairyText);
         }
 
         if (!clicked)
@@ -50,6 +54,7 @@ public class Diary : MonoBehaviour
 
         if (GameManager.instance != null)
         {
+            textBoxPannel.GetComponent<OpenTextBox>().CloseTextBox();
             finish(); //trigger finish event which the GameManager should be listening to and trigger the end scene function
         }
         else
