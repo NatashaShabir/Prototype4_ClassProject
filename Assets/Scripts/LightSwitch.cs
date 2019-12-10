@@ -58,7 +58,8 @@ public class LightSwitch : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         lightSource.SetActive(true);
-        //lightBulb.GetComponent<Renderer>().material = lit;
+
+        gameObject.tag = "Untagged";
 
         if (ray!= null)
         {

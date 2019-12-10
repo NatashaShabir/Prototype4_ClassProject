@@ -1664,6 +1664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 2066238523}
+  isEnd: 0
 --- !u!65 &596858621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6552,6 +6553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 117658337}
+  isEnd: 0
 --- !u!65 &1809104965
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7011,7 +7013,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2021395847}
   - component: {fileID: 2021395846}
-  - component: {fileID: 2021395848}
   m_Layer: 0
   m_Name: Test
   m_TagString: Untagged
@@ -7049,20 +7050,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2021395848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021395845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 405f89bb6f414bb4eac949c486037e12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeCanvasPrefab: {fileID: 2329270483758387131, guid: c5798d9b6eaf1ea4583b4f76c99c2b99,
-    type: 3}
 --- !u!1 &2030324463
 GameObject:
   m_ObjectHideFlags: 0
@@ -7474,10 +7461,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbef0b78c7755f047a8442214a4c3bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightObject: {fileID: 836967209}
-  spotlight: {fileID: 594432179}
+  lightBulb: {fileID: 0}
+  lightSource: {fileID: 0}
   lit: {fileID: 2100000, guid: 9d7543fa3bdb4784d9f377db8f44f397, type: 2}
   unlit: {fileID: 2100000, guid: 9b28801e857e1064298e4b3caa649352, type: 2}
+  ray: {fileID: 0}
   isOn: 0
 --- !u!1 &2128373251
 GameObject:
