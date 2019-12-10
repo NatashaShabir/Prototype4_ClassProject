@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce014bb3a9f049a4e8397814d48db776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diaryClip: {fileID: 8300000, guid: 04618c586f87dde478c9abb97cedaa9b, type: 3}
+  diaryClip: {fileID: 8300000, guid: 83e339e8114b67d43bfa5662d0688a56, type: 3}
   textBoxPannel: {fileID: 422340300}
   dairyText: "My therapist gave me this diary thinking it might help sort out my recurring
     nightmares, they call it a dream journal. I\u2019m not sure how this is going

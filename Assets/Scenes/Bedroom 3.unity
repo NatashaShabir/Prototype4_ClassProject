@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce014bb3a9f049a4e8397814d48db776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diaryClip: {fileID: 8300000, guid: ff1572db2a3f0224bbdf863eb09575cc, type: 3}
+  diaryClip: {fileID: 8300000, guid: 0d71dfd2e8566c549847dcbc6463c242, type: 3}
   textBoxPannel: {fileID: 427997965}
   dairyText: I got through the entire routine this time without giving in to my fears.
     I guess I just really needed to focus on the performance and myself, nothing else

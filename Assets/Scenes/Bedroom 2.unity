@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce014bb3a9f049a4e8397814d48db776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diaryClip: {fileID: 8300000, guid: 69468aee19d4d574f809e8503d28f394, type: 3}
+  diaryClip: {fileID: 8300000, guid: afda1ae3b49981845940382109a94e52, type: 3}
   textBoxPannel: {fileID: 693606672}
   dairyText: "My nightmare was different this time, I think logging my dreams has
     helped me navigate them better. This time I found the only way out was to, well,
