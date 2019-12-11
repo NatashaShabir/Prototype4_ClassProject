@@ -15,4 +15,12 @@ public class MenuButtons : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            GameManager.instance.EndScene();
+        }
+    }
 }
