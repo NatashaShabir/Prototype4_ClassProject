@@ -14,7 +14,7 @@ public class AreWeInPosition : MonoBehaviour
 
     int successfulPoses = 0;
 
-    public PlayableDirector timelineManager;
+    public TimelineController timeline; //reference to timeline script on directo
 
     //where we are getting our colour choices from
     public GameObject colourSelector;
@@ -88,7 +88,8 @@ public class AreWeInPosition : MonoBehaviour
             Debug.Log("Boooo!!! Your Standing In the WRONG Place!!!");
             rightColourChosen = false;
             //play end scene animation
-            timelineManager.Play();
+            timeline.reloading = true;
+            timeline.Play();
         }
 
        // Debug.Log(whatLightAreWeUnder.GetComponent<Renderer>().material.name + "" + x.name);

@@ -116,7 +116,6 @@ public class StageDetection : MonoBehaviour
                             }
                             else if (playerPosCheck.rightColourChosen == false)
                             {
-                                timeline.reloading = false;
                                 timeline.Play();
                                 Debug.Log("The Player failed");
                                 
