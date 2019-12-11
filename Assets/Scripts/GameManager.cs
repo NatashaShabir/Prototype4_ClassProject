@@ -50,13 +50,9 @@ public class GameManager : MonoBehaviour
             Levels(true, true, true, false);
         }
 
-        //This is so that the canvas that controls fading in and out doesn't get created during the menu screen or the end scene
-        //The fade canvas made it so that the menu buttons could not be interacted with
-        if (SceneManager.GetActiveScene().buildIndex != 0 && SceneManager.GetActiveScene().buildIndex != SceneManager.sceneCountInBuildSettings - 1)
-        {
-            //creates canvas whenever a scene starts which should automatically fade in from black
-            fadeCanvas = Instantiate(fadeCanvasPrefab);
-        }
+        //start fading at start of scene
+        fadeCanvas = Instantiate(fadeCanvasPrefab);
+        
 
         if (SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCountInBuildSettings - 1)
         {
