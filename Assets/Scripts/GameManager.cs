@@ -104,7 +104,6 @@ public class GameManager : MonoBehaviour
     IEnumerator EndGame()
     {
         yield return new WaitForSeconds(3);
-        UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
 

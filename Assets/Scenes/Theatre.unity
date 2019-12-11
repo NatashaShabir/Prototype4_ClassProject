@@ -7823,6 +7823,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: ba3de8b0a0564494a94d0d749a0a908c, type: 3}
+      propertyPath: movementSettings.ForwardSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: ba3de8b0a0564494a94d0d749a0a908c, type: 3}
+      propertyPath: movementSettings.StrafeSpeed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 13600000, guid: ba3de8b0a0564494a94d0d749a0a908c, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -12333,11 +12341,13 @@ PlayableDirector:
   - key: {fileID: 5558571233152558856, guid: 662ff3b26c7d5eb40a5acfbe46c69293, type: 2}
     value: {fileID: 1214506248}
   - key: {fileID: -2818197570804600427, guid: 662ff3b26c7d5eb40a5acfbe46c69293, type: 2}
-    value: {fileID: 1040054389}
+    value: {fileID: 0}
   - key: {fileID: 4355307595334906284, guid: 662ff3b26c7d5eb40a5acfbe46c69293, type: 2}
     value: {fileID: 0}
   - key: {fileID: -9215842268099032368, guid: 662ff3b26c7d5eb40a5acfbe46c69293, type: 2}
     value: {fileID: 297560432}
+  - key: {fileID: 1276398349143147731, guid: 662ff3b26c7d5eb40a5acfbe46c69293, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1809400085

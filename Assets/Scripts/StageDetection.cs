@@ -61,7 +61,7 @@ public class StageDetection : MonoBehaviour
             {
                 //If we can start the timer, then lets start taking time away from the countdown variable
 
-                countdown -= Time.fixedDeltaTime;
+                countdown -= Time.deltaTime;
                 counter.text = countdown.ToString("0"); //set the counter text to equal the countdown variable
 
                 if (playerPosCheck != null)

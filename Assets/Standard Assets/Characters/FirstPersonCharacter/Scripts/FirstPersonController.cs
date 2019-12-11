@@ -71,7 +71,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
             {
                 StartCoroutine(m_JumpBob.DoBobCycle());
-                PlayLandingSound();
+                //PlayLandingSound();
                 m_MoveDir.y = 0f;
                 m_Jumping = false;
             }
@@ -81,6 +81,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+
+            CharacterUpdate();
         }
 
 
@@ -92,7 +94,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        private void FixedUpdate()
+        private void CharacterUpdate()
         {
             float speed;
             GetInput(out speed);
@@ -123,9 +125,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             else
             {
-                m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
+                m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.deltaTime;
             }
-            m_CollisionFlags = m_CharacterController.Move(m_MoveDir*Time.fixedDeltaTime);
+            m_CollisionFlags = m_CharacterController.Move(m_MoveDir*Time.deltaTime);
 
             ProgressStepCycle(speed);
             UpdateCameraPosition(speed);
@@ -137,7 +139,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void PlayJumpSound()
         {
             m_AudioSource.clip = m_JumpSound;
-            m_AudioSource.Play();
+            //m_AudioSource.Play();
         }
 
 
@@ -156,7 +158,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_NextStep = m_StepCycle + m_StepInterval;
 
-            PlayFootStepAudio();
+            //PlayFootStepAudio();
         }
 
 
