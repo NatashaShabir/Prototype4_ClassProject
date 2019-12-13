@@ -22,6 +22,8 @@ public class StageDetection : MonoBehaviour
     public Text counter;
     public Text PressE;
 
+    public AudioSource applause;
+
     private void OnTriggerEnter(Collider other)
     {
         //If the player enters the stage set a reference to the are we in position script
@@ -110,6 +112,7 @@ public class StageDetection : MonoBehaviour
                             {
                                 countdown = countdownReset;
                                 startTimer = true;
+                                applause.Play();
                                 playerPosCheck.wePosed = false;
                                 PressE.gameObject.SetActive(true);
 
