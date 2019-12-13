@@ -14,6 +14,8 @@ public class Platform : MonoBehaviour
 
     Animator animator;
 
+    public AudioSource breakingSound;
+
     private void Start()
     {
         if (GetComponent<Animator>())
@@ -54,6 +56,7 @@ public class Platform : MonoBehaviour
                 isFalling = true;
                 //start shaking
                 Camera.main.GetComponent<Animator>().SetBool("IsShaking", true);
+                breakingSound.Play();
             }
             //else attaches the player to the platform so the player will move with the platform
             else
